@@ -49,26 +49,26 @@ class LiveCoinWatch:
         payload["end"] = end
         return self.__request(url, payload)
 
-    def historic_values__coin(self, coin):
+    def historic_values__coin(self, **kwargs):
         endpoint = "coins/single/history"
         payload = {
-            "code": coin,
-            "currency": self.currency,
-            "start": 1617035100000,
-            "end": 1617035400000,
+            "code": kwargs.get("code"),
+            "currency": kwargs.get("currency"),
+            "start": kwargs.get("start"),
+            "end": kwargs.get("end"),
             "meta": True
         }
         return self.__request(endpoint, payload)
 
-    def latest_values__coins(self, coins):
+    def latest_values__coins(self, **kwargs):
         endpoint = "coins/map"
         payload = {
-            "codes": coins,
-            "currency": self.currency,
-            "sort": "rank",
+            "codes": kwargs.get("codes"),
+            "currency": kwargs.get("currency"),
+            "sort": kwargs.get("sort"),
             "order": "ascending",
-            "offset": 0,
-            "limit": 0,
+            "offset": kwargs.get("offset"),
+            "limit": kwargs.get("limit"),
             "meta": False
         }
         return self.__request(endpoint, payload)
