@@ -18,9 +18,7 @@ class LiveCoinWatch:
         self.req_timeout = 120
     
     def __request(self, endpoint, payload):
-        print(payload)
         url = "{}/{}".format(self.base_url, endpoint)
-        print(url)
         try:
             res = self.session.post(url, data=json.dumps(payload), timeout=self.req_timeout)
             return json.loads(res.content.decode("utf-8"))

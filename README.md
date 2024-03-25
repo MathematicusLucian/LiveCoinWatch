@@ -11,7 +11,7 @@ pip install LiveCoinWatch==1.0.0
 ```
 
 ## Env
-Create: ``python3source myvenv/bin/activate -m venv venv``
+Create: ``python3 -m venv venv``
 
 Active: ``source venv/bin/activate``
 
