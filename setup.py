@@ -11,7 +11,7 @@ setup(
     url="https://github.com/MathematicusLucian/LiveCoinWatch",
     packages=find_packages(),
     install_requires=["requests"],
-    keywords=["crypto", "crypto bot", "livecoinwatch"],
+    keywords=["crypto", "livecoinwatch", "api"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 2",
