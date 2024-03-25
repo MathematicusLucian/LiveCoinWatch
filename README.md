@@ -1,6 +1,6 @@
 # LiveCoinWatch
 
-***This package is available at: [pypi.org/project/LiveCoinWatch/1.0.0/](pypi.org/project/LiveCoinWatch/1.0.0/)***
+***This package is available at: [pypi.org/project/LiveCoinWatch/1.0.0/](https://pypi.org/project/LiveCoinWatch/1.0.0/)***
 
 A Python interface for the [LiveCoinWatch API](https://www.livecoinwatch.com/)
 
