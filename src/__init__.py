@@ -1,1 +1,1 @@
-from .crypto_tracker import CryptoTracker
+from .livecoinwatch import LiveCoinWatch
