@@ -51,3 +51,16 @@ latest_values = coin_data.coins__map(
             limit=0)
 print(latest_values)
 ```
+
+## Uploading to PyPi
+Used Twine: ```python3 -m pip install --upgrade build```
+
+```python3 -m pip install --upgrade twine```
+
+Build: ```python3 -m build```
+
+Upload to PyPi: ```python3 -m twine upload --repository testpypi dist/*```
+
+(.pypirc in $HOME directory)
+
+View at: ```https://test.pypi.org/project/LiveCoinWatch/1.0.0/```
