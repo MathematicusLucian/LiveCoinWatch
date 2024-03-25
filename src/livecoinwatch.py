@@ -42,14 +42,30 @@ class LiveCoinWatch:
         payload = kwargs
         return self.__request(url, payload)
 
-    def overview_history(self, start, end, **kwargs):
-        url = "overview/history"
-        payload = kwargs
-        payload["start"] = start
-        payload["end"] = end
-        return self.__request(url, payload)
+    def overview_history(self, **kwargs):
+        endpoint = "overview/history"
+        payload = { 
+            "start": kwargs.get("start"),
+            "end": kwargs.get("end")
+        }
+        return self.__request(endpoint, payload)
 
-    def historic_values__coin(self, **kwargs):
+    def coin(self, **kwargs):
+        endpoint = "coins/single"
+        payload = { 
+            "code": kwargs.get("code")
+        }
+        return self.__request(endpoint, payload)
+
+    def coin__contract(self, **kwargs):
+        endpoint = "coins/contract"
+        payload = {
+            "platform": kwargs.get("platform"),
+            "address": kwargs.get("address")
+        }
+        return self.__request(endpoint, payload)
+
+    def coin__history(self, **kwargs):
         endpoint = "coins/single/history"
         payload = {
             "code": kwargs.get("code"),
@@ -60,7 +76,12 @@ class LiveCoinWatch:
         }
         return self.__request(endpoint, payload)
 
-    def latest_values__coins(self, **kwargs):
+    def coins__list(self, **kwargs):
+        endpoint = "coins/list"
+        payload = kwargs
+        return self.__request(endpoint, payload)
+
+    def coins__map(self, **kwargs):
         endpoint = "coins/map"
         payload = {
             "codes": kwargs.get("codes"),
@@ -71,4 +92,26 @@ class LiveCoinWatch:
             "limit": kwargs.get("limit"),
             "meta": False
         }
+        return self.__request(endpoint, payload)
+
+    def fiats(self):
+        endpoint = "fiats/all"
+        payload = {}
+        return self.__request(endpoint, payload)
+
+    def exchanges_single(self, **kwargs):
+        endpoint = "exchanges/single"
+        payload = {
+            "code": kwargs.get("code")
+        }
+        return self.__request(endpoint, payload)
+
+    def exchanges_list(self, **kwargs):
+        endpoint = "exchanges/list"
+        payload = kwargs
+        return self.__request(endpoint, payload)
+    
+    def platforms_all(self):
+        endpoint = "platforms/all"
+        payload = {}
         return self.__request(endpoint, payload)

@@ -7,7 +7,7 @@ coins = ["ETH","BTC","XRP","SHIB"]
 
 coin_data = LiveCoinWatch(config['LIVECOINWATCH_API_KEY'], "GBP")
 for coin in coins:
-    historic_values = coin_data.historic_values__coin(
+    historic_values = coin_data.coin__history(
         code=coin,
         currency=base_currency,
         start=1617035100000,
@@ -15,7 +15,7 @@ for coin in coins:
     print(historic_values)
     print("\n")
     
-latest_values = coin_data.latest_values__coins(
+latest_values = coin_data.coins__map(
             codes= coins,
             currency=base_currency,
             sort="rank",
