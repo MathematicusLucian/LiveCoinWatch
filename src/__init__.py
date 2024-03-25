@@ -1,1 +1,1 @@
-from .main import CryptoTracker
+from .crypto_tracker import CryptoTracker
