@@ -5,9 +5,9 @@ config = dotenv_values(".env")
 base_currency = "GBP"
 coins = ["ETH","BTC","XRP","SHIB"]
 
-tracker = LiveCoinWatch(config['LIVECOINWATCH_API_KEY'], "GBP")
+coin_data = LiveCoinWatch(config['LIVECOINWATCH_API_KEY'], "GBP")
 for coin in coins:
-    historic_values = tracker.historic_values__coin(
+    historic_values = coin_data.historic_values__coin(
         code=coin,
         currency=base_currency,
         start=1617035100000,
@@ -15,7 +15,7 @@ for coin in coins:
     print(historic_values)
     print("\n")
     
-latest_values = tracker.latest_values__coins(
+latest_values = coin_data.latest_values__coins(
             codes= coins,
             currency=base_currency,
             sort="rank",
