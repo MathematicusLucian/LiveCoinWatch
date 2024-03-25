@@ -1,0 +1,18 @@
+[project]
+name = "LiveCoinWatch"
+version = "1.0.0"
+authors = [
+  { name="Luke Jones" },
+]
+description = "Interface in Python for the Live Coin Watch API"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/MathematicusLucian/LiveCoinWatch"
+Issues = "https://github.com/MathematicusLucian/LiveCoinWatch/issues"
