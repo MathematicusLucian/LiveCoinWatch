@@ -64,3 +64,5 @@ Upload to PyPi: ```python3 -m twine upload --repository testpypi dist/*```
 (.pypirc in $HOME directory)
 
 View at: ```https://test.pypi.org/project/LiveCoinWatch/1.0.0/```
+
+Install: ``python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps LiveCoinWatch``
