@@ -1,11 +1,13 @@
 # LiveCoinWatch
 
-A Python interface for the (LiveCoinWatch API)[https://www.livecoinwatch.com/]
+***This package is available at: [pypi.org/project/LiveCoinWatch/1.0.0/](pypi.org/project/LiveCoinWatch/1.0.0/)***
+
+A Python interface for the [LiveCoinWatch API](https://www.livecoinwatch.com/)
 
 ## Install
 
 ```bash
-pip install LiveCoinWatch
+pip install LiveCoinWatch==1.0.0
 ```
 
 ## Env
@@ -67,6 +69,6 @@ Upload to TestPyPi: ```python3 -m twine upload --repository testpypi dist/*```
 
 View at: ```https://test.pypi.org/project/LiveCoinWatch/1.0.0/```
 
-Install: ``pip install LiveCoinWatch``
+Install: ``pip install LiveCoinWatch==1.0.0``
 
 Install (TestPyPi): ``python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps LiveCoinWatch``
