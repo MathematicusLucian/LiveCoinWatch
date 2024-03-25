@@ -27,6 +27,28 @@ class LiveCoinWatch:
         except requests.exceptions.RequestException:
             raise
 
+    def status(self):
+        url = "status"
+        payload = {}
+        return self.__request(url, payload)
+
+    def credits(self):
+        url = "credits"
+        payload = {}
+        return self.__request(url, payload)
+
+    def overview(self, **kwargs):
+        url = "overview"
+        payload = kwargs
+        return self.__request(url, payload)
+
+    def overview_history(self, start, end, **kwargs):
+        url = "overview/history"
+        payload = kwargs
+        payload["start"] = start
+        payload["end"] = end
+        return self.__request(url, payload)
+
     def historic_values__coin(self, coin):
         endpoint = "coins/single/history"
         payload = {
